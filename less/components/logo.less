@@ -1,0 +1,31 @@
+.logo {
+  & a {
+    color: @darkTextColor;
+    text-decoration: none;
+  }
+  & img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 5px;
+  }
+  & span {
+    font-weight: 700;
+    font-size: 26px;
+    color: inherit;
+    text-transform: uppercase;
+  }
+}
+@media(max-width:768px) {
+  .logo {
+    & span {
+      font-size: 24px;
+    }
+  }
+}
+@media(max-width:576px) {
+  .logo {
+    & span {
+      font-size: 22px;
+    }
+  }
+}

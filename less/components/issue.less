@@ -1,0 +1,30 @@
+.issue {
+  flex-basis: 48%;
+  & h2 {
+    .pub-title();
+  }
+  & h2 span {
+    .pub-title-span();
+  }
+  & h2::after {
+    .pub-title-line();
+  }
+  & img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  &__date {
+    display: inline-block;
+
+    .pub-date();
+  }
+  &__announce {
+    margin: 0;
+  }
+}
+@media(max-width:768px) {
+  .issue {
+    flex-basis: 100%;
+  }
+}

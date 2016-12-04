@@ -1,0 +1,36 @@
+.social {
+  float: right;
+  margin: 0;
+  padding-left: 0;
+
+  list-style-type: none;
+  & li {
+    display: inline-block;
+    margin-left: 5px;
+  }
+  & a {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 19px;
+    height: 19px;
+    padding: 1px 0;
+
+    text-align: center;
+    color: @lightTextColor;
+
+    background: @darkBgColor;
+    border-radius: 50%;
+
+    transition: 0.5s;
+  }
+  & a:hover {
+    background: @companyColor;
+  }
+}
+@media(max-width:576px) {
+  .social {
+    & a {
+      padding: 2px 0;
+    }
+  }
+}

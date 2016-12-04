@@ -1,0 +1,28 @@
+doctype html
+html
+  head
+    title Soline test
+    meta(charset="utf-8")
+    //- meta(name="keywords", content="")
+    //- meta(name="description", content="")
+    meta(name="viewport", content="initial-scale=1.0, user-scalable=no")
+    //- link(href="img/", rel="shortcut icon")
+    link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css")
+    link(href="https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto:300,400,500,700&amp;subset=cyrillic")
+    link(rel="stylesheet", href="css/style.css")
+    script(src="js/jquery-2.1.1.min.js")
+  body
+    include header.pug
+    include nav.pug
+    include main-page-slider.pug
+    include intro.pug
+    include publications.pug
+    include feedback.pug
+    // название обезличенное, т.к. текст рыба, непонятно о чем тут будет речь
+    include text-block.pug
+    include footer.pug
+    include footer-bottom.pug
+    .scroll-top
+      i.fa.fa-caret-square-o-up(aria-hidden="true")
+    script(src="js/owl.carousel.min.js")
+    script(src="js/common.js")

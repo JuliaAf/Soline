@@ -1,0 +1,141 @@
+.footer {
+  background-color: @darkBgColor;
+  background-image: url(../img/footer-bg-img.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: auto 100%;
+  border-top: 4px solid @companyColor;
+  & .wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+  &__contacts {
+    display: flex;
+    flex-basis: 35%;
+    flex-flow: column wrap;
+    padding: 40px 0;
+  }
+  &__contacts .logo {
+    margin-bottom: 30px;
+
+    text-align: center;
+  }
+  &__contacts .logo span {
+    color: @lightTextColor;
+  }
+  &__contacts-adress {
+    margin-bottom: 10px;
+
+    color: @lightTextColor;
+  }
+  &__contacts-email {
+    margin-bottom: 5px;
+
+    color: @companyColor;
+  }
+  &__contacts-phone {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+
+    font-weight: 400;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  &__contacts-phone a {
+    margin-right: 10px;
+    margin-bottom: 5px;
+
+    color: @lightTextColor;
+    text-decoration: none;
+  }
+  &__contacts-phone a:last-child {
+    padding: 10px 5px;
+
+    font-weight: 400;
+    font-size: 13px;
+    text-transform: uppercase;
+
+    background: @companyColor;
+    border-radius: 2px;
+
+    transition: 0.5s;
+  }
+  &__contacts-phone a:last-child:hover {
+    background: darken(@companyColor,15%);
+  }
+  &__nav {
+    display: flex;
+    flex-basis: 65%;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    padding: 40px 0;
+  }
+  &__nav .social {
+    margin-bottom: 100px;
+  }
+  &__nav .social a {
+    background: @companyColor;
+  }
+  &__nav .social a:hover {
+    background: darken(@companyColor, 15%);
+  }
+  &__nav .nav {
+    font-size: 11px;
+
+    background: none;
+  }
+  &__nav .nav__list {
+    justify-content: flex-end;
+  }
+  &__nav .nav__list-item {
+    margin-right: 10px;
+  }
+  &__nav .nav__list-item::before {
+    display: none;
+  }
+  &__nav .nav__list-item::after {
+    transform: translateX(125%);
+  }
+}
+@media(max-width:980px) {
+  .footer {
+    & .wrapper {
+      align-items: stretch;
+    }
+    &__contacts {
+      flex-basis: 50%;
+    }
+    &__contacts-phone a:last-child {
+      white-space: nowrap;
+    }
+    &__nav {
+      flex-basis: 50%;
+      justify-content: space-between;
+    }
+    &__nav .social {
+      margin-bottom: 0;
+    }
+    &__nav .nav__list {
+      flex-direction: column;
+    }
+    &__nav .nav__list-item {
+      padding: 0;
+
+      text-align: right;
+    }
+    &__nav .nav__list-item:last-child::after {
+      display: inline-block;
+    }
+  }
+}
+
+@media(max-width:576px) {
+  .footer {
+    &__contacts-phone {
+      font-size: 15px;
+    }
+  }
+}
